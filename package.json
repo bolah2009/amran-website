@@ -1,0 +1,58 @@
+{
+  "name": "amran-website",
+  "version": "1.0.0",
+  "description": "A user and mobile friendly website for a local NGO",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
+    "start:prod": "webpack-dev-server --mode production --open",
+    "format": "npx prettier  --write '**/*.{css,html,js,json,md.json,yaml,yml}'",
+    "format:check": "npx prettier  --check '**/*.{css,html,js,json,md.json,yaml,yml}'",
+    "lint": "npx eslint '**/*.js' --fix && npx stylelint '**/*.css' --fix",
+    "lint:check": "npx eslint '**/*.js' && npx stylelint '**/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolah2009/amran-website.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "DOM",
+    "Webpack",
+    "ES6",
+    "Modules"
+  ],
+  "author": "Bola Ahmed Buari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bolah2009/amran-website/issues"
+  },
+  "homepage": "https://github.com/bolah2009/amran-website#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "prettier": "1.19.1",
+    "style-loader": "^1.0.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "webpack": "^4.40.0",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.1",
+    "webpack-fix-style-only-entries": "^0.4.0",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}
