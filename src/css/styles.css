@@ -124,8 +124,7 @@ section {
 .nav {
   height: 80px;
   position: fixed;
-  left: 0;
-  right: 0;
+  width: 100%;
   top: 0;
   padding: 16px 16px;
   box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -271,7 +270,7 @@ section {
 /* Navbar menu */
 
 .menu-bar {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 80px;
   right: 0;

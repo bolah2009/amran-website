@@ -1,74 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <meta property="og:site_name" content="https://bolabuari.com" />
-    <meta property="og:title" content="AMRAN Website" />
-    <meta
-      property="og:description"
-      content="A user and mobile friendly website for a local NGO"
-    />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="blog" />
-    <title>AMRAN WEBSITE</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <body>
-    <nav class="nav d-flex jc-sb ai-c wrap">
-      <a href="/" class="brand-logo-btn button">
-        <div class="brand-logo d-flex ai-c">
-          <img class="d-block img" alt="brand logo" src="./img/logo.png" />
-          <span>AMRAN</span>
-        </div>
-      </a>
+  <meta property="og:site_name" content="https://bolabuari.com" />
+  <meta property="og:title" content="AMRAN Website" />
+  <meta property="og:description" content="A user and mobile friendly website for a local NGO" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="blog" />
 
-      <ul class="nav-list large d-none d-flex-md">
-        <li class="nav-list-item">
-          <a href="/" class="button">home</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="/who-we-are" class="button">
-            who we are
-          </a>
-        </li>
-        <li class="nav-list-item">
-          <a href="/what-we-do" class="button">
-            what we do
-          </a>
-        </li>
-      </ul>
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
-      <button  id="menu-toggle-button" class="toggle-button d-none-md" type="button">
-        <div class="navbar-toggle" id="menu-toggle"></div>
-      </button>
 
-      <a href="#donate" class="button d-none d-block-md">donate</a>
-    </nav>
+  <title>AMRAN WEBSITE</title>
+</head>
 
-    <div id="menu-bar" class="menu-bar col jc-sb d-none-md">
-      <ul>
-        <li>
-          <a href="/" class="button d-block">home</a>
-        </li>
-        <li>
-          <a href="/who-we-are" class="button d-block">
-            who we are
-          </a>
-        </li>
-        <li>
-          <a href="/what-we-do" class="button d-block">
-            what we do
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="main">
-      <%= partial %>
-    </div>
-    <footer></footer>
-  </body>
+<body>
+  <nav class="nav d-flex jc-sb ai-c wrap">
+    <a href="/" class="brand-logo-btn button">
+      <div class="brand-logo d-flex ai-c">
+        <img class="d-block img" alt="brand logo" src="./img/icons-192.png" />
+        <span>AMRAN</span>
+      </div>
+    </a>
+
+    <ul class="nav-list large d-none d-flex-md">
+      <li class="nav-list-item">
+        <a href="/" class="button">home</a>
+      </li>
+      <li class="nav-list-item">
+        <a href="/who-we-are" class="button">
+          who we are
+        </a>
+      </li>
+      <li class="nav-list-item">
+        <a href="/what-we-do" class="button">
+          what we do
+        </a>
+      </li>
+    </ul>
+
+    <button id="menu-toggle-button" class="toggle-button d-none-md" type="button">
+      <div class="navbar-toggle" id="menu-toggle"></div>
+    </button>
+
+    <a href="#donate" class="button d-none d-block-md">donate</a>
+  </nav>
+
+  <div id="menu-bar" class="menu-bar col jc-sb d-none-md">
+    <ul>
+      <li>
+        <a href="/" class="button d-block">home</a>
+      </li>
+      <li>
+        <a href="/who-we-are" class="button d-block">
+          who we are
+        </a>
+      </li>
+      <li>
+        <a href="/what-we-do" class="button d-block">
+          what we do
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main">
+    <%= partial %>
+  </div>
+  <footer></footer>
+</body>
+
 </html>
