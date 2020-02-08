@@ -13,18 +13,19 @@ const include = filePath => {
 
 const pages = ['index', 'who-we-are', 'what-we-do'];
 
-const pagesConfig = pages.map(
-  entryName =>
-    new HtmlWebpackPlugin({
-      filename: `${entryName}.html`,
-      template: `./src/pages/template.ejs`,
-      templateParameters: {
-        body: 'This is the body',
-        partial: include(`./src/pages/${entryName}.ejs`),
-        include,
-      },
-    }),
-);
+const pagesConfig = () =>
+  pages.map(
+    entryName =>
+      new HtmlWebpackPlugin({
+        filename: `${entryName}.html`,
+        template: `./src/pages/template.ejs`,
+        templateParameters: {
+          body: 'This is the body',
+          partial: include(`./src/pages/${entryName}.ejs`),
+          include,
+        },
+      }),
+  );
 
 module.exports = {
   mode: 'development',
@@ -40,6 +41,9 @@ module.exports = {
   devServer: {
     contentBase: 'public',
     hot: true,
+    watchOptions: {
+      ignored: /node_modules/,
+    },
   },
   module: {
     rules: [
@@ -47,7 +51,7 @@ module.exports = {
     ],
   },
   plugins: [
-    ...pagesConfig,
+    ...pagesConfig(),
     new MiniCssExtractPlugin({ filename: '[name].css' }),
     new FixStyleOnlyEntriesPlugin(),
     new OptimizeCSSAssetsPlugin({}),
@@ -58,4 +62,5 @@ module.exports = {
 
     new CopyPlugin([{ from: './src/assets', to: '.' }]),
   ],
+  watch: true,
 };
