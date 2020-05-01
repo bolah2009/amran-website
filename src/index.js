@@ -9,6 +9,8 @@ if ('serviceWorker' in navigator) {
 
 // Menu bar toggle
 
+const mainElement = document.querySelector('#main');
+const navElement = document.querySelector('#nav');
 const menuBar = document.querySelector('#menu-bar');
 const menuToggle = document.querySelector('#menu-toggle');
 const menuToggleButton = document.querySelector('#menu-toggle-button');
@@ -65,3 +67,19 @@ const slideShow = (elements, activePos = 0) => {
 };
 
 slideShow(slideElements);
+
+// Change navbar on scroll
+
+const styleNavBar = () => {
+  if (mainElement.firstChild.id !== 'home') {
+    navElement.classList.add('scroll');
+    return;
+  }
+  if (window.scrollY < 40) {
+    navElement.classList.remove('scroll');
+  } else {
+    navElement.classList.add('scroll');
+  }
+};
+
+document.addEventListener('scroll', styleNavBar, { passive: true });

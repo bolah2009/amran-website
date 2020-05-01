@@ -93,7 +93,7 @@
   </head>
 
   <body>
-    <nav class="nav d-flex jc-sb ai-c wrap">
+    <nav class="nav d-flex jc-sb ai-c wrap" id="nav">
       <a href="/" class="brand-logo-btn button">
         <div class="brand-logo d-flex ai-c">
           <img class="d-block img" alt="brand logo" src="./img/icons-192.png" />
@@ -101,7 +101,7 @@
         </div>
       </a>
 
-      <ul class="nav-list large d-none d-flex-md">
+      <ul class="nav-list d-none d-flex-md">
         <li class="nav-list-item">
           <a href="/" class="button">home</a>
         </li>
@@ -145,13 +145,13 @@
         </li>
       </ul>
     </div>
-    <main class="main">
+    <main class="main" id="main">
       <%= partial %>
     </main>
-    <footer>
-      <ul class="footer-list">
+    <footer class="footer">
+      <ul class="footer-list d-flex col row-md jc-sb">
         <li>
-          <section>
+          <section class="footer-section">
             <h3>Resources</h3>
             <ul>
               <li>
@@ -167,7 +167,7 @@
           </section>
         </li>
         <li>
-          <section>
+          <section class="footer-section">
             <h3>Get involved</h3>
             <ul>
               <li>
@@ -180,7 +180,7 @@
           </section>
         </li>
         <li>
-          <section>
+          <section class="footer-section">
             <h3>Media</h3>
             <ul>
               <li>

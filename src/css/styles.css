@@ -182,10 +182,10 @@ img {
 .button.brand-logo-btn {
   background: none;
   border: none;
-  font-size: 12px;
+  font-size: 1.2em;
   font-weight: bold;
   color: inherit;
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: normal;
 }
 
@@ -382,6 +382,11 @@ img {
   color: #ce3232;
 }
 
+.nav .button:hover {
+  background: initial;
+  color: #ce3232;
+}
+
 .main {
   margin-top: 80px;
 }
@@ -392,4 +397,46 @@ img {
 
 .donors img {
   height: 72px;
+}
+
+/* Footer section */
+
+.footer {
+  margin-top: 32px;
+  padding: 16px;
+  min-height: 20vh;
+}
+
+.footer-list {
+  padding: 8px;
+}
+
+.footer-section {
+  margin-bottom: 16px;
+}
+
+.footer-section li {
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 720px) {
+  .nav-list-item  {
+    padding: 0px 4px;
+  }
+
+  .nav-list-item  a:hover::after {
+    transform: scaleY(15);
+  }
+
+  .nav-list-item a::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #f04b11;
+    display: block;
+    transition: all 0.5s;
+    position: relative;
+    z-index: -1;
+    transform-origin: 100% 100%;
+  }
 }
